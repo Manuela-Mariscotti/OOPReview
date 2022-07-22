@@ -10,6 +10,7 @@ export class MobileLibrary{
         this.name = name;
         this.location = location;
         this.mobiles = mobiles;
+        this.totalPrice = this.totalPriceCalculation();
     }
 
     public getName():string{
@@ -39,13 +40,22 @@ export class MobileLibrary{
     public setMobiles(mobiles:Mobile):void{
         this.mobiles.push(mobiles);
     }
-    
-    public totalPriceCalculation():number{
+
+    private totalPriceCalculation():number{
         let total=0;
         for (let i =0; i < this.mobiles.length; i++){
             let currentValue=this.mobiles[i].getPrice();
             total +=currentValue;
         }
         return total;
+    }
+    public printLibrary():string{
+        let currentMobile;
+        console.log("This is all my mobiles:");
+        for (let i = 0; i < this.mobiles.length; i++) {
+            currentMobile = this.mobiles[i].toString();
+        }
+        return currentMobile;
+        //se ejecuta bien, pero despues imprime undefined. porque?
     }
 }
