@@ -35,4 +35,4 @@ MobileLibrary_2.setName("Moviles para currar");
 console.log(`Nuevo nombre de la librería : ${MobileLibrary_2.getName()}`);
 
 console.log(MobileLibrary_2.getTotalPrice());
-console.log(MobileLibrary_2.printLibrary());
+MobileLibrary_2.printLibrary();
