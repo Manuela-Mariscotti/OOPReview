@@ -49,13 +49,12 @@ export class MobileLibrary{
         }
         return total;
     }
-    public printLibrary():string{
-        let currentMobile;
+
+    public printLibrary():void{
         console.log("This is all my mobiles:");
         for (let i = 0; i < this.mobiles.length; i++) {
-            currentMobile = this.mobiles[i].toString();
+            this.mobiles[i].toString()
         }
-        return currentMobile;
-        //se ejecuta bien, pero despues imprime undefined. porque?
+        console.log(`Price overall : ${this.totalPrice} €`);
     }
 }
