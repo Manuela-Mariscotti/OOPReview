@@ -38,7 +38,7 @@ export class Punto{
         let y2 = otroPunto.y;
 
         let result = Math.sqrt(((x2-x1)**2)+((y2-y1)**2));
-
+        result = parseFloat(result.toFixed(2))
         return result;
     }
 
